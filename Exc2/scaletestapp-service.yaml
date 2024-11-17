@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: scaletestapp-service
+  namespace: default
+  annotations:
+    prometheus.io/port: "metrics"
+    prometheus.io/scrape: "true"
+  labels:
+    prometheus-monitored: "true"
+spec:
+  selector:
+    app: scaletestapp
+  ports:
+    - name: "web"
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
