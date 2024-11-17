@@ -1,4 +1,5 @@
-# Типы данных
+# Схема данных
+
 type Client {
   id: String!
   name: String!
