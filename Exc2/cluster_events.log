@@ -1,0 +1,26 @@
+LAST SEEN               TYPE      REASON                              OBJECT                                         MESSAGE
+7m44s                   Warning   PossibleMemoryBackedVolumesOnDisk   Node/minikube                                  The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+7m44s                   Normal    Starting                            Node/minikube                                  Starting kubelet.
+7m44s                   Warning   CgroupV1                            Node/minikube                                  Cgroup v1 support is in maintenance mode, please migrate to Cgroup v2.
+7m43s                   Normal    NodeAllocatableEnforced             Node/minikube                                  Updated Node Allocatable limit across pods
+7m43s                   Normal    NodeHasSufficientMemory             Node/minikube                                  Node minikube status is now: NodeHasSufficientMemory
+7m43s                   Normal    NodeHasNoDiskPressure               Node/minikube                                  Node minikube status is now: NodeHasNoDiskPressure
+7m43s                   Normal    NodeHasSufficientPID                Node/minikube                                  Node minikube status is now: NodeHasSufficientPID
+7m39s                   Normal    RegisteredNode                      Node/minikube                                  Node minikube event: Registered Node minikube in Controller
+7m37s                   Normal    Starting                            Node/minikube                                  
+6m29s                   Normal    SuccessfulCreate                    ReplicaSet/scaletestapp-deployment-8dc9df94d   Created pod: scaletestapp-deployment-8dc9df94d-vjrs5
+6m29s                   Normal    Scheduled                           Pod/scaletestapp-deployment-8dc9df94d-vjrs5    Successfully assigned default/scaletestapp-deployment-8dc9df94d-vjrs5 to minikube
+6m29s                   Normal    ScalingReplicaSet                   Deployment/scaletestapp-deployment             Scaled up replica set scaletestapp-deployment-8dc9df94d to 1
+6m28s                   Normal    Pulling                             Pod/scaletestapp-deployment-8dc9df94d-vjrs5    Pulling image "shestera/scaletestapp:latest"
+6m20s                   Normal    Created                             Pod/scaletestapp-deployment-8dc9df94d-vjrs5    Created container scaletestapp
+6m20s                   Normal    Pulled                              Pod/scaletestapp-deployment-8dc9df94d-vjrs5    Successfully pulled image "shestera/scaletestapp:latest" in 8.366s (8.366s including waiting). Image size: 10812245 bytes.
+6m20s                   Normal    Started                             Pod/scaletestapp-deployment-8dc9df94d-vjrs5    Started container scaletestapp
+5m23s (x3 over 5m53s)   Warning   FailedGetResourceMetric             HorizontalPodAutoscaler/scaletestapp-hpa       failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+5m23s (x3 over 5m53s)   Warning   FailedComputeMetricsReplicas        HorizontalPodAutoscaler/scaletestapp-hpa       invalid metrics (1 invalid out of 1), first error is: failed to get memory resource metric value: failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+68s                     Normal    Scheduled                           Pod/scaletestapp-deployment-8dc9df94d-ndm92    Successfully assigned default/scaletestapp-deployment-8dc9df94d-ndm92 to minikube
+68s                     Normal    SuccessfulCreate                    ReplicaSet/scaletestapp-deployment-8dc9df94d   Created pod: scaletestapp-deployment-8dc9df94d-ndm92
+68s                     Normal    ScalingReplicaSet                   Deployment/scaletestapp-deployment             Scaled up replica set scaletestapp-deployment-8dc9df94d to 2 from 1
+68s                     Normal    SuccessfulRescale                   HorizontalPodAutoscaler/scaletestapp-hpa       New size: 2; reason: memory resource utilization (percentage of request) above target
+67s                     Normal    Pulled                              Pod/scaletestapp-deployment-8dc9df94d-ndm92    Container image "shestera/scaletestapp:latest" already present on machine
+67s                     Normal    Created                             Pod/scaletestapp-deployment-8dc9df94d-ndm92    Created container scaletestapp
+66s                     Normal    Started                             Pod/scaletestapp-deployment-8dc9df94d-ndm92    Started container scaletestapp

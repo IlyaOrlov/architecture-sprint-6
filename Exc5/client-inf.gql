@@ -1,0 +1,72 @@
+# Схема данных
+
+type Client {
+  id: String!
+  name: String!
+  age: Int
+  documents: [Document]
+  relatives: [Relative]
+}
+
+type Document {
+  id: String!
+  type: String!
+  number: String!
+  issueDate: String!
+  expiryDate: String
+}
+
+type Relative {
+  id: String!
+  relationType: String!
+  name: String!
+  age: Int
+}
+
+type Query {
+  # Получить клиента по ID
+  client(id: String!): Client
+
+  # Получить документы клиента по ID
+  clientDocuments(id: String!): [Document]
+
+  # Получить родственников клиента по ID
+  clientRelatives(id: String!): [Relative]
+}
+
+
+# Примеры запросов
+
+# Для получения полной информации о клиенте, включая документы и родственников:
+query {
+  client(id: "123") {
+    id
+    name
+    age
+    documents {
+      id
+      type
+    }
+    relatives {
+      name
+      relationType
+    }
+  }
+}
+
+# Для получения документов клиента:
+query {
+  clientDocuments(id: "123") {
+    id
+    type
+    issueDate
+  }
+}
+
+# Для получения  информации о родственниках клиента:
+query {
+  clientRelatives(id: "123") {
+    name
+    relationType
+  }
+}
